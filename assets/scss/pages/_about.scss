@@ -1,0 +1,127 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+
+#about_id {
+    // border: $border;
+    background-color: $brand_deep;
+    height: 430px;
+
+    body.dark & {
+        background-color: $black;
+    }
+
+    @include custom_responsive(0px,992px){
+        height: auto;
+    }
+    .about_div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include custom_responsive(0px, 991.9px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+            
+        .about_logo_box{
+            // border: $border;
+            width: 159px;
+            height: 54px;
+            flex-shrink: 0;    
+            display: flex;
+            gap: 10px;
+            margin-top: 75px;
+            .about_icon{
+                
+                .icon{
+                    height: 54px;
+                    width: 54px;
+                    position: relative;
+
+                    img{
+
+                    }
+                    p{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform:  translateX(-50%) translateY(-50%);
+                        @include font($brand_deep,$poppins,24px,normal,700,12px)
+                    }
+                }
+
+            }
+
+            .about_name{
+                // border: $border;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h3{
+                    @include font(#F9F8F9,$poppins,22px,normal,700,23px,1.5px);
+
+                }
+            }
+        }
+
+        .about_info{
+            // border: $border;
+            display: grid;
+            grid-template-columns: repeat(3,160px);
+            gap: 30px;
+            margin: 100px 0px;
+
+            @include sm(){
+                gap: 0px;
+            }
+            @include custom_responsive(400px, 575.9px){
+                grid-template-columns: repeat(2,160px);
+                
+            }
+            @include custom_responsive(0px, 399.9px){
+                grid-template-columns: repeat(1,160px);
+                
+            }
+
+            .product, .company, .support{
+                // border: $border;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+
+                @include custom_responsive(0px,575.9px){
+                    align-items: left;
+                }
+
+                h5{
+                    @include font(#F4F5F7,$inter,20px,normal,500,30px);
+
+                }
+
+                .link_list{
+                    display: flex;
+                    gap: 12px;
+                    flex-direction: column;
+                    @include custom_responsive(0px,767.9px){
+                        gap: 5px;
+                    }
+
+                    a{
+
+                        li{
+                            @include font(#EEEFF4,$inter,16px,normal,300,26px);
+                        }
+                    }
+
+                }
+            }
+            
+        }
+    }
+}

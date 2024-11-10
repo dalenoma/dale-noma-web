@@ -1,0 +1,173 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+@use '../mixins/font_mix';
+
+header{
+
+    .header_box{
+        // border:$border;
+        position: relative;
+        width: 1110px;
+        height: 100px;
+        margin: auto;
+
+        @include custom_responsive(320px, 1399.9px){
+            width: 85vw;
+        }
+
+        body.dark & {
+            background-color: $black;
+            color: $white;
+        }
+
+        .header_logo{
+        // @include border();
+
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-shrink: 0px;
+            gap: 15px;
+
+            
+
+            img{
+                width: 36px;
+                height: 36px;
+                
+                body.dark & {  
+                    filter: invert(100%);
+                }
+            }
+
+            h3{
+                @include font($heading_text,$poppins, 
+                20px, normal, 700);
+                // all 5 below are included above :)
+                // color: $heading_text;
+                // font-family: $poppins;
+                // font-size: 20px;
+                // font-style: normal;
+                // font-weight: 700;
+                line-height: 35px;
+                letter-spacing: 1.5px;
+
+                body.dark & {  
+                    color: $white;
+                }
+            }
+
+        }
+
+        .change_button{
+
+                    position: absolute;
+                    left: 150px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 26.5px;
+                    background-color: $brand_deep;
+                    width: 150px;
+                    height: 28px;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;                
+                    color: $white;
+
+                    @include custom_responsive(0px, 991.9px){
+                    height:22px ;
+                    font-size: 14px;
+                    left: 10px;
+                    top: 2px;
+                    transform: translateY(0%);                  
+                    }
+        }
+
+        .header_nav{
+            // border: $border;
+            position: absolute;
+            left: 488px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 555;
+
+            @include custom_responsive(576px, 1399.9px){
+                left: 60%;
+                transform: translateX(-50%) translateY(-50%);
+                
+            }
+            @include custom_responsive(0px,767.9px){
+                display: none;
+            }
+
+            ul{
+                display: flex;
+                gap: 56px;
+                padding: 12px;
+
+                @include custom_responsive(576px, 800.9px){
+                    gap: 15px;
+                }
+
+                li{
+                    list-style-type: none;                  
+                    text-transform: uppercase;         
+
+                    a{
+                        @include font($heading_text,$poppins, 
+                        12px, normal, 400);
+                        // all 5 below are included above :)
+                        // color: $heading_text;
+                        // font-family: Poppins;
+                        // font-size: 12px;
+                        // font-style: normal;
+                        // font-weight: 400;
+                        line-height: 23px;
+                        letter-spacing: 1.5px;
+                       
+                        body.dark & {  
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header_search_bar{
+            // border: $border;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 555;
+            
+            @include xs(){
+            right: 70px;
+            }
+            @include sm(){
+            right: 70px;
+            }
+
+            a{
+                height: 24px;
+                width: 24px;
+                i{
+                    font-size: 24px;
+                    color: $heading_text;
+
+                    body.dark & {  
+                    color: $white;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+
+

@@ -1,0 +1,92 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+#nav_bar {
+
+    
+    display: none;
+    position: absolute;
+    right: -250px;
+    top: 22px;
+    height: 400px;
+    width: 200px;
+    // transform: scale(0);
+    border-radius: 10px;
+    background-color: rgba(9, 75, 114, 0.591);
+    backdrop-filter: blur(10px);
+    transition-duration: right 0.4s;
+    z-index: 999;
+
+    @include custom_responsive(0px, 768px){
+        display: block;
+    }
+
+    &.active_nav {
+        right: 15px;
+    }
+
+    #nav_close_mark {
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        i {
+            font-size: 40px;
+            color: $white;
+        }
+    }
+
+    ul {
+
+
+        li {
+            margin: 50px 30px;
+
+            a {
+                @include font($white, $poppins, 18px, normal, 400);
+                text-transform: uppercase;
+
+            }
+        }
+    }
+}
+
+.header_box {
+
+    .nav_icon {
+        display: none;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+
+        
+
+        @include xs() {
+            display: inline-block;
+            position: absolute;
+
+
+
+        }
+
+        @include sm() {
+            display: inline-block;
+            position: absolute;
+
+        }
+
+        a {
+
+            i {
+                font-size: 24px;
+                color: $brand_deep;
+
+                body.dark & {  
+                    color: $white;
+                }
+            }
+        }
+    }
+}

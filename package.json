@@ -1,0 +1,20 @@
+{
+  "name": "lawyer_portfolio_f2h",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass assets/scss/style.scss assets/styles/style.css -w --style compressed",
+    "postcss": "postcss assets/styles/style.css -o assets/styles/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "sass": "^1.66.1"
+  }
+}

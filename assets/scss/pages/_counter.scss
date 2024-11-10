@@ -1,0 +1,174 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+// @use '../mixins/font_mix';
+
+#counter{
+    // border: $border;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+    height: 376px;
+    width: 100%;
+    background-color: $service_bg;
+
+    body.dark &{
+        background-color: $black;
+    }
+    @include custom_responsive(0px, 991.9px){
+        height: 100%;
+        width: 100%;
+    }
+
+    .counter_div{
+
+        height: 356px;
+        width: 100vw;
+        background: $brand_deep;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        body.dark &{
+            background-color: $heading_text;
+        }
+        
+        @include custom_responsive(0px, 767.9px){
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            // flex-wrap: wrap;
+            margin: 30px auto;
+        }
+
+        h4{
+            @include font($white,$playfair,48px,normal,900,64px,0.24px);
+            margin-bottom: 8px;
+
+            @include xs(){
+                font-size: 23px;
+                line-height: 35px;
+                font-weight: 700;
+            }
+            @include custom_responsive(576px, 991.9px){
+                font-size: 30px;
+                line-height: 45px;
+                font-weight: 900;
+            }
+            @include lg(){
+                font-size: 35px;
+                line-height: 30px;
+                font-weight: 700;
+            }
+
+            }
+        }
+        p{
+            @include font($white,$poppins,18px,normal,300,32px,0.5px);
+            align-self: stretch; 
+            font-feature-settings: 'salt' on, 'liga' off;
+            margin-bottom: 0px;
+
+            @include xs(){
+                font-size: 14px;
+                line-height: 25px;
+            }
+            @include sm(){
+                font-size: 16px;
+                line-height: 25px;
+            }
+            @include lg(){
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 300;
+            }
+        }
+
+        .counter_list{
+            // @include border(red);
+                display: grid;
+                grid-template-columns: repeat(3,270px);
+                gap: 15px;
+                margin-top: 48px;
+
+                @include xs(){
+                    grid-template-columns: 100%;
+                }
+                @include sm(){
+                    display: flex; 
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0;
+                }
+                @include md(){
+                    display: grid; 
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40;
+                }
+
+            .single_box{
+                    border-right:1px solid $p_text_light;
+                    width: 270px;
+                    height: 96px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    @include custom_responsive(0px, 767.9px){
+                        width: 100%;
+                        border-right:none;
+                        border-top:1px solid $p_text_light;
+                    }
+                    @include md(){
+                        border-right:none;
+                        border:1px solid $p_text_light;
+
+                    }
+                h6{
+                    @include font($white,$poppins,48px,normal,800,64px,normal);
+
+                    @include xs(){
+                        font-size: 25px;
+                        line-height: 30px;
+                        font-weight: 700;
+                    }
+                    
+                    @include custom_responsive(576px, 991.9px){
+                        font-size: 30px;
+                        line-height: 45px;
+                        font-weight: 900;
+                    }
+
+                    @include lg(){
+                        font-size: 35px;
+                        line-height: 30px;
+                        font-weight: 700;
+                    }
+                }
+
+                p{
+                    @include font($white,$poppins,18px,normal,300,32px,0.54px);
+
+                    @include custom_responsive(0px, 991.9px){
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                    }
+                    @include lg(){
+                        font-size: 16px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+        } 
+    }

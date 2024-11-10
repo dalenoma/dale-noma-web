@@ -1,0 +1,135 @@
+@use "../layouts/reset";
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+
+header{
+
+    .header_box2{
+        border:$border;
+        display: none;
+        justify-content: space-between;
+        width: 1110px;
+        height: 100px;
+        margin: auto;
+        padding: 0 20px 0 7px;
+
+        
+
+        @include custom_responsive(320px, 1399.9px){
+            width: 85vw;
+        }
+
+
+        .header_logo2{
+        @include border();
+            height: 36px;
+            width: 144px;
+            display: flex;
+            flex-shrink: 0px;
+            gap: 15px;
+            margin: auto 0;
+            
+            @include custom_responsive(320px, 991px){
+                margin-right: 20px;
+            }
+            
+            
+
+            
+
+            img{
+                width: auto;
+                max-height: 100%;
+                
+                
+            }
+
+            h3{
+                @include font($heading_text,$poppins, 
+                20px, normal, 700);
+                // all 5 below are included above :)
+                // color: $heading_text;
+                // font-family: $poppins;
+                // font-size: 20px;
+                // font-style: normal;
+                // font-weight: 700;
+                line-height: 35px;
+                letter-spacing: 1.5px;
+            }
+
+        }
+
+        .header_nav2{
+            border: $border;
+            height: 47px;
+            width: 447px;
+            margin: auto 0;
+            flex: 1;
+            justify-content: flex-end;
+
+            // &:nth-child(2){
+            //    margin-left: auto ;
+            // }
+
+
+            @include custom_responsive(576px, 1399.9px){
+                
+                
+            }
+
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                gap: 56px;
+                padding: 12px;
+
+                @include custom_responsive(576px, 800.9px){
+                    gap: 15px;
+                }
+
+                li{
+                    list-style-type: none;
+                    text-transform: uppercase;         
+
+                    a{
+                        @include font($heading_text,$poppins, 
+                        12px, normal, 400);
+                        // all 5 below are included above :)
+                        // color: $heading_text;
+                        // font-family: Poppins;
+                        // font-size: 12px;
+                        // font-style: normal;
+                        // font-weight: 400;
+                        line-height: 23px;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
+        }
+
+        .header_search_bar2{
+            border: $border;
+            height: 24px;
+            width: 24px;
+            margin: auto 0px auto 131px ;
+
+            @include custom_responsive(320px, 991px){
+                margin: auto 0 auto 5vw;
+            }
+
+            
+            // margin-left: 38px 20px 38px 131px;
+
+            a{
+                height: 24px;
+                width: 24px;
+                i{
+                    font-size: 24px;
+                    color: $heading_text;
+                }
+            }
+        }
+    }
+}

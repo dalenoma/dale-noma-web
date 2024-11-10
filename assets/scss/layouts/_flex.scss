@@ -1,0 +1,32 @@
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-grid{
+    display: grid;
+}
+
+$jc_values: flex-start, center, flex-end, space-between, space-around, space-evenly;
+
+@each $jc_value in $jc_values {
+    .just-con-#{$jc_value} {
+        justify-content: $jc_value;
+    }
+}
+
+$align_values: center, end, flex-start, flex-end;
+
+@each $align_value in $align_values {
+    .align-items-#{$align_value} {
+        align-items: $align_value;
+    }
+}
+
+$gap_values: 10px, 15px, 20px, 25px, 30px;
+
+@each $gap_value in $gap_values {
+    .gap-#{$gap_value} {
+        gap: $gap_value;
+    }
+}

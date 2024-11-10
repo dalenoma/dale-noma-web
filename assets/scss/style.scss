@@ -1,0 +1,55 @@
+@use "./abstracts/variables";
+@use "./components/buttons";
+@use "./components/arrow";
+@use "./mixins/responsive";
+@use "./mixins/mix_button";
+@use './mixins/common_mix';
+@use './mixins/font_mix';
+@use "./layouts/reset";
+@use "./layouts/headers";
+@use "./layouts/header_2";
+@use "./layouts/footers";
+@use "./layouts/container";
+@use './layouts/nav_button';
+@use "./layouts/flex";
+@use "./layouts/banner";
+@use "./pages/index";
+@use "./pages/about";
+@use "./pages/contact";
+@use "./pages/service";
+@use "./pages/counter";
+@use "./pages/testimonial";
+@use "./pages/about";
+@use "./pages/footer";
+
+body{
+    background-color: $dim;
+    height: auto;
+
+    &.dark {
+        background-color: $dim;
+    }
+}
+
+.page_body{
+    // @include border(pink);
+    background-color: $white;
+    // background-color: grey;
+    width: 1440px;
+    margin: auto;
+    overflow: hidden;
+
+    body.dark & {
+        background-color: $black;
+    }
+
+
+
+    @include custom_responsive(0px, 1399.9px){
+        width: 90vw;
+    }
+    @include custom_responsive(0px, 991.9px){
+        position: relative;
+    }
+
+}

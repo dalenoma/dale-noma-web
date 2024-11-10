@@ -1,0 +1,68 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+#footer_id{
+    height: 100px;
+    background-color: #7b7b00; //004D7B
+    display: flex;
+    align-items: center;
+
+    body.dark &{
+        background-color: $black;
+    }
+
+    @include custom_responsive(0px,575.9px){
+        height: auto;
+        padding-bottom: 10px;
+    }
+   
+    .footer_div{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+
+            @include custom_responsive(0px,575.9px){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            
+        .copyright_div{
+
+            p{
+                @include font(#D9DBE1,$inter,14px,normal,300,24px);
+            }
+        }
+
+        .social_icons{
+
+            .icon_list{
+                // border: $border;
+                display: flex;
+                gap: 16px;
+                li{
+
+                    a{
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 50%;
+                        background-color: #32598d;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                            background-color: $white;
+                            i{color: $brand_deep;}
+                        }
+                        i{
+                            font-size: 15px;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

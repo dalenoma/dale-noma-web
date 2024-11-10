@@ -1,0 +1,176 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+
+#testimonial_id{
+
+        // border: $border;
+        background-color: $service_bg;
+        height: 550px;
+
+        body.dark & {
+            filter: invert(100%);   
+        }
+
+        @include custom_responsive(0px, 1250px){
+            height: 100%;
+        }
+        
+
+        h4{
+            // border: $border;
+            @include font($heading_text, $playfair, 48px, normal, 700, 64px, 0.5px);
+            text-align: center;
+            margin-top: 25px;
+            
+            @include custom_responsive(900px, 1250px){
+                font-size: 35px;
+                line-height: 45px;
+            }
+            @include custom_responsive(576px, 899.9px){
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @include xs(){
+                font-size: 25px;
+                line-height: 0px;
+            }
+            
+        }
+
+    .testimonial_div{
+
+        display: grid;
+        grid-template-columns: 540px 540px;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+
+        @include custom_responsive(0px, 1250px){
+            grid-template-columns: 100%;
+        }
+        
+        .single_testimonial{
+            // border: $border;
+            margin-top: 51px;
+
+            @include custom_responsive(900px, 1250px){
+                display: flex;
+                gap: 30px;
+            }
+            @include custom_responsive(615px, 899.9px){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            @include custom_responsive(0px, 614.9px){
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .comment_box{
+                // border: $border;
+                position: relative;
+                height: 220px;
+                width: 540px;
+                border-radius: 10px;
+                box-shadow: 0px 2px 20px 2px rgba(180, 180, 180, 0.927);
+                background: $white;
+                padding: 32px;
+
+                @include custom_responsive(0px, 614.9px){
+                    height: auto;
+                }
+                
+                h6{
+                    // border: $border;
+                    @include font($heading_text, $poppins, 18px, normal, 500, 28px, 0.5px);
+                    text-align: center;
+                    margin-bottom: 8px;
+
+                    @include custom_responsive(0px, 614.9px){
+                        font-size: 16px;
+                    }
+
+
+                }
+
+                p{
+                    // border: $border;
+                    @include font($p_text_deep, $poppins, 14px, normal, 400, 24px, 0.5px);
+                    text-align: center;
+
+                    @include custom_responsive(0px, 614.9px){
+                        font-size: 13px;
+                    }
+                }
+                .arrow{
+                    @include arrow($sq:25px,$bg:rgb(232, 191, 191),);                  
+                    position: absolute;
+                    left: 40%;
+                    bottom: -25px;
+                    @include custom_responsive(900px, 1250px){
+                    left: 99.9%;
+                    bottom:50%;    
+                    clip-path: polygon(100% 66%, 0 0, 100% 0);
+                    transform: rotate(180deg);                      
+                    }
+
+                    
+                }
+                
+            }
+
+            .client_box{
+                margin-top: 30px;
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                justify-content: center;
+
+                .image{
+
+                    img{
+
+                        body.dark &{
+                            filter: invert(100%);
+                        }
+                    }
+                }
+
+                .client_info{
+
+                    h5{
+
+                        @include font(#151617, $inter, 18px, normal, 700, 28px, 0.5px);
+                        text-align: center;
+
+                        @include custom_responsive(0px, 614.9px){
+                            font-size: 16px;
+                        }
+                    }
+
+                    p{
+                        @include font($heading_text, $inter, 14px, normal, 400, 24px, 0.5px);
+                        text-align: center;
+
+                        @include custom_responsive(0px, 614.9px){
+                            font-size: 13px;
+                        }
+                        
+                    }
+                }
+        
+            }
+        }
+
+    }
+}

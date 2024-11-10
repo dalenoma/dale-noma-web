@@ -1,0 +1,341 @@
+
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+@use '../layouts/container';
+
+
+
+.banner_sec{
+
+    .banner_div{
+        position: relative;
+        
+
+        .left_info_div{
+                // @include border(green);
+
+                @include custom_responsive(0px, 991.9px){
+                    width: auto;
+                }
+
+                body.dark & {
+                     > p,h1{
+                       color: $white;  
+                     }
+                     
+                 }
+
+            .news_div{
+                // @include border(green);
+
+                background-color: $news_div_bg;
+                width: 454px;
+                height: 40px;
+                border-radius: 26.5px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                padding: 0 5px;
+                margin-top: 94px;
+                margin-bottom: 16px;
+
+                body.dark & {
+                   background-color: $brand_light;
+                    >p{
+                      color: $white;  
+                    }
+                    
+                }
+
+                @include custom_responsive(0px, 991.9px){
+                    margin-top: 10px;
+                };
+
+                @include custom_responsive(0px, 650px){
+                    width: unset;
+                    height: auto;
+                    
+                 };
+
+                a{
+                    // @include border(yellow);
+                    border-radius: 26.5px;
+                    background-color: $brand_deep;
+                    width: 86px;
+                    height: 28px;
+                    flex-shrink: 0;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;                
+                    color: $white;
+
+
+                }
+
+                p{
+
+                    @include font($news_text, $jakarta, 14px,
+                     normal, 400, );
+
+
+                }
+
+            }
+
+            h1{
+                @include font($brand_deep, $playfair, 90px, normal, 700);
+                line-height:108px;
+                letter-spacing: 1.8px;
+                width: 751px;
+                height: 216px;
+                display: inline-block;
+                
+                @include custom_responsive(0px, 767.9px){
+                    width: unset;
+                    font-size: 30px;
+                    line-height:40px;
+                    height: auto;
+                    // margin-bottom: 70px;
+                   
+                }
+                @include custom_responsive(768px, 1299.9px){
+                    width: 534px;
+                    font-size: 40px;
+                    line-height: 50px;
+                    // letter-spacing: 0px;
+                    height: auto;
+                   
+                }
+                
+
+            }
+
+            .des_p{
+                width: 590px;
+                height: 76px;
+                margin-top: 46px;
+                @include font($p_text_deep, $jakarta, 24px, normal, 500);
+                line-height: 37.92px;
+                letter-spacing: .5px;
+
+                @include custom_responsive(0px, 767.9px){
+                    width: unset;
+                    font-size: 18px;
+                    // margin-top: 0;
+
+                    // line-height:60px;
+                    height: auto;
+                }
+
+                @include custom_responsive(768px, 1299.9px){
+                    width: 470px;
+                    height: auto;
+                    // margin-top: 0px;
+                }
+            
+            }
+            .get_start_button{
+                margin-top: 42px;
+                height: 80px;
+                width: 190px;
+                background-color: $brand_deep;
+                border-radius: 8px;
+                display: grid; 
+                align-items: center;
+                justify-content: center;
+
+                @include custom_responsive(0px, 767.9px){
+                    height: 40px;
+                    width: 150px;
+                }
+
+                @include custom_responsive( 991px, 1300px){
+                    margin-top: 80px;
+
+                }
+                
+                
+                
+                p{
+                    @include font($button_text, $jakarta, 16px,normal,700);
+                    line-height: 22.48px;
+                    letter-spacing: 1.28px;
+                    text-transform: uppercase;
+
+                    @include custom_responsive(0px, 767.9px){
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .company_pararaph{
+                margin-top: 115px ;
+                height: 31px;
+                width: 540px;
+                @include font($p_text_light, $jakarta, 22px, normal, 400);
+                line-height: 30.91px;
+                letter-spacing: .88px;
+
+                body.dark & {
+                    color: $white;
+                }
+
+                @include custom_responsive(0px, 991.9px){
+                    margin-top: 30px;
+                    width: auto;
+                    height: auto;
+                    font-size: 18px;
+
+                }
+            }
+            .company_logo_div{
+                // @include border(green);
+                margin-top: 34px;
+                margin-bottom: 40px;
+                height: 88px;
+                width: 248px;
+                flex-shrink: 0;
+
+                
+                
+
+
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: 33px;
+
+                    li{
+                        a{
+
+                            img{
+                                width: auto;
+                                height: 26px;
+                                flex-shrink: 0;
+
+                                body.dark & {  
+                                    filter: invert(100%);
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .big_ellipse{
+                position: absolute;
+                // display: inline-block;
+                top: 0px;
+                right: -230px;
+                width: 811px;
+                height: 811px;
+                border-radius: 811px;
+                background: $ellipse;
+                
+                @include custom_responsive(0px, 991.9px){
+                    display: none;
+                }
+            }
+
+            .small_ellipse{
+                position: absolute;
+                top: 0;
+                right: -120px;
+                width: 633.213px;
+                height: 633.213px;
+                flex-shrink: 0;
+                border-radius: 633.213px;
+                background: $ellipse;
+
+                @include custom_responsive(0px, 991.9px){
+                    display: none;
+                }
+                
+            }
+
+            .photo_div{
+                position: absolute;
+                bottom: 0px;
+                right: -50px;
+
+
+                @include custom_responsive(0px, 991.9px){
+                    position: relative;
+                    bottom: 60px;
+                    top: 5px;
+                }
+
+                img{
+                    
+
+                    @include custom_responsive(0px, 991.9px){
+                        width: 40vw;
+                        height: auto;
+
+                    }
+                }
+
+                .lawyer_info{
+                    position: absolute;
+                    bottom: -20px;
+                    right: 75px;                   
+                    width: 382px;
+                    height: 114px;
+                    border-radius: 10px;
+                    background: $white; 
+                    display: flex;
+                    gap: 2px;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+
+                    body.dark & {
+                        background-color: $black;
+                        >h2,p{
+                          color: $white;  
+                        }
+                        
+                    }
+                    
+                    @include custom_responsive(767.9px, 991.9px){
+                        width: 20vw;
+                        height: 80px ;
+                        bottom: -20px;
+                        left: 75px;
+                    }
+
+                    @include custom_responsive(0px, 768px){
+                        display: none;
+                    }
+  
+                    .lawyer_name{
+                    
+                        @include font($dim, $jakarta, 24px, normal,700);
+                        line-height: 36px;                       
+                        text-align: center;
+                        
+                    }
+
+                    .designation{
+                    
+                        @include font($designation, $jakarta, 16px, normal, 500);
+                        text-align: center;
+                        line-height: 36px;
+                        margin: 0;
+
+
+                    }
+                }
+            }
+        }  
+
+        
+        
+        
+    }
+}

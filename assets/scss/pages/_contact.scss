@@ -1,0 +1,147 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+#Contact_id{
+
+    height: 374px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+    body.dark &{
+        filter: invert(100%);
+    }
+
+    @include custom_responsive(0px, 1199.9px){
+        height: auto;
+        margin-top: 30px;
+    }
+    @include custom_responsive(768px, 1199.9px){
+        height: auto;
+    }
+    @include custom_responsive(0px, 767.9px){
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact_info_div{
+            // border: $border;
+            margin: 37px 0px 40px 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include custom_responsive(0px, 1199.9px){
+                height: auto;
+                margin: 0px 0px 30px 0px;
+            }
+            @include custom_responsive(0px, 767.9px){
+                width: 80%;
+                align-items: center;
+                text-align: center;
+            }
+
+        h4{
+            @include font($heading_text,$playfair,48px,normal,700,64px,0.5px);
+            margin-bottom: 15px;
+
+            @include custom_responsive(900px, 1250px){
+                font-size: 35px;
+                line-height: 45px;
+            }
+            @include custom_responsive(576px, 899.9px){
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @include xs(){
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+        p{
+            @include font($p_text_deep,$poppins,24px,normal,400,36px,0.4px);
+            margin-bottom: 25px;
+
+            @include custom_responsive(900px, 1250px){
+                font-size: 20px;
+                line-height: 30px;
+            }
+            @include custom_responsive(576px, 899.9px){
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @include xs(){
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+        }
+        a{
+            width: 219px;
+            height: 64px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: $brand_deep;    
+            display: flex;    
+            gap: 18px;
+            align-items: center;  
+            justify-content: center;
+
+           
+            @include custom_responsive(900px, 1250px){
+                width: 160px;
+                height: 50px;
+            }
+            @include custom_responsive(0px, 899.9px){
+                width: 120px;
+                height: 40px;
+            }
+
+            i{
+                color: #F9F8F9;
+                font-size: 22px;
+
+                @include custom_responsive(0px, 899.9px){
+                    font-size: 12px;
+                }
+            }
+            h6{
+                @include font(#F9F8F9,$poppins,22px,normal,500,36px,0.7px);
+                
+                @include custom_responsive(0px, 899.9px){
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .image{
+        // border: $border;
+        margin-right: 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include custom_responsive(0px, 991.9px){
+            margin: 0px;
+        }
+            
+        img{
+            height: calc(374px - 82px);
+            border-radius: 0px 0px 0px 40px;
+
+            body.dark &{
+                filter: invert(100%);
+            }
+
+            @include custom_responsive(900px, 1250.9px){
+                height: 250px;
+            }
+            @include custom_responsive(0px, 899.9px){
+                height: 220px;               
+            }
+        }
+    }
+}

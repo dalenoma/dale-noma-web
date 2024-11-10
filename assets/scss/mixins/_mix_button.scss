@@ -1,0 +1,8 @@
+@mixin master_button($bg_color, $border){
+    height: 20px;
+    width: 40px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 1px solid $border;
+    background-color: $bg_color;
+}

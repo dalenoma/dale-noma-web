@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+
+
+@mixin border($border_color: red, $border_width: 1px, $border_style: solid){
+    border-width: $border_width ;
+    border-color: $border_color;
+    border-style: $border_style;
+
+}
+
+@mixin tr($tr: .5s){
+    transition-duration: $tr;
+}

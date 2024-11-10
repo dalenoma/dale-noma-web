@@ -1,0 +1,32 @@
+
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+
+body{
+    margin: 0;
+}
+div,
+section,
+form,
+ul,
+ol,
+h1,h2,h3,h4,h5,h6,
+p{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    @use tr();
+    font-family: $poppins;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    // text-decoration: none; (problem)
+    text-decoration-line: none;
+}
+a, span, i {
+    display: inline-block;
+    @use tr();
+    font-family: $poppins;
+}

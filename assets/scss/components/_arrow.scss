@@ -1,0 +1,11 @@
+@use '../abstracts/variables';
+@use '../mixins/common_mix';
+@use '../mixins/responsive';
+
+@mixin arrow($sq:20px,$bg:red,){
+    height: $sq;
+    width: $sq;
+    background-color: $bg;
+    transform: rotate(0 deg);
+    clip-path: polygon(10% 91%, 0 0, 100% 0);
+}

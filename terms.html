@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="canonical" href="https://nishathub.github.io/Lawyer-Landing-Page/">    
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.png">
+
+    <meta name="robots" content="index, follow">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+
+    <meta name="logo" content="./assets/images/logo.png">
+    <meta name="Classification" content="Website">
+    <!--<meta name="identifier-URL" content="">-->
+    <meta name="directory" content="submission">
+    <meta name="category" content="Internet">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="target" content="all">
+    <meta name="HandheldFriendly" content="True">
+    <!--<meta name="copyright" content="">-->
+    <!--<meta name="price" content="">-->
+
+    <meta name="keywords" content="portfolio-website, responsive-webpage, night-mode, double-theme, eye-catching interface">
+    <meta name="description" content="lawyer portfolio website with night-mode">
+
+    <title>Lawyer Portfolio</title>
+    <meta property="og:title" content="Lawyer Portfolio" />
+    <meta property="og:site_name" content="Lawyer Portfolio" />
+    <meta property="og:description" content="lawyer portfolio website with night-mode" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="https://nishathub.github.io/Lawyer-Landing-Page/" />
+    <meta property="og:image" content="https://nishathub.github.io/Lawyer-Landing-Page/mockup/mock-lawyer-tn.png"/>
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+
+        <link rel="fabicon" type="image/png" sizes="16x16" href="https://nishathub.github.io/Lawyer-Landing-Page/lawyer-favicon.png">    
+    <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- MY EXTERNAL CSS  -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    
+    <style>
+        #terms {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        h2 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        .last-updated {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+    
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    
+        li {
+            font-size: 1rem;
+            color: #555;
+        }
+    
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+    
+            h2 {
+                font-size: 1.25rem;
+            }
+    
+            p, li {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="body" class="">
+    <div class="page_body">
+        <!-- HIDDEN NAVBAR  -->
+        <div id="nav_bar" class="">
+            <ul class="nav_list">
+                <a id="nav_close_mark" class="" href="#"><i onclick="nav_bar.classList.remove('active_nav')"
+                        class="fa-solid fa-xmark"></i></a>
+                        <li><a href="/">home</a></li> 
+                <li><a href="/#Contact_id">contact</a></li>
+                <li><a href="/#testimonial_id">testimonial</a></li>
+                <li><a href="/#service_sec">about</a></li>
+            </ul>
+        </div>
+        <header>
+            <div class="header_box">
+                <div class="header_logo">
+                    <img src="./assets/images/logo.png" alt="header_logo" />
+                    <h3>Lawliet</h3>
+                </div>
+                <a class="change_button" onclick="body.classList.toggle('dark')" href="#">Change Mode</a>
+                <nav class="header_nav">
+                    <ul class="nav_list">
+                        <li><a href="/">home</a></li> 
+                        <li><a href="#Contact_id">contact</a></li>
+                        <li><a href="#testimonial_id">testimonial</a></li>
+                        <li><a href="#service_sec">about</a></li>
+                    </ul>
+                </nav>
+                <!--<div class="header_search_bar">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div> -->
+                <!-- HIDDEN NAV ICON  -->
+                <div class="nav_icon">
+                    <a href="#"><i onclick="nav_bar.classList.add('active_nav')"
+                            class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+            </div>
+        </header>
+        <br />
+        <header>
+            <div class="header_box2">
+                <div class="header_logo2">
+                    <img src="./assets/images/logo.png" alt="header_logo" />
+                    <h3>Lawliet</h3>
+                </div>
+                <nav class="header_nav2">
+                    <ul class="nav_list">
+                        <li><a href="#">contact</a></li>
+                        <li><a href="#">testimonial</a></li>
+                        <!--<li><a href="#">about</a></li>-->
+                        <li><a href="#">terms</a></li>
+                    </ul>
+                </nav>
+                <div class="header_search_bar2">
+                    <!-- <img src="./assets/images/header_search_outline.png" alt="search-outline"> -->
+
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+        </header>
+        <section id="terms">
+            <div class="terms-container">
+                <h1>Terms of Service</h1>
+        
+                <p class="last-updated">Last Updated: November 9, 2024</p>
+        
+                <h2>1. Introduction</h2>
+                <p>
+                    Welcome to our website! By accessing or using our services, you agree to comply with and be bound by the following terms and conditions ("Terms of Service"). If you do not agree to these terms, please refrain from using our services.
+                </p>
+        
+                <h2>2. Acceptance of Terms</h2>
+                <p>
+                    By using this website, you acknowledge and agree that you have read, understood, and agree to be bound by these Terms of Service and any other applicable policies, including our Privacy Policy.
+                </p>
+        
+                <h2>3. Use of Services</h2>
+                <p>
+                    Our services are provided to you on a non-exclusive, non-transferable basis. You agree to use the services only for lawful purposes and in compliance with all applicable laws.
+                </p>
+        
+                <h2>4. Restrictions</h2>
+                <p>
+                    You may not: (i) copy, modify, or distribute any part of the website or services; (ii) engage in any activities that could harm, disrupt, or impair the performance of the website; or (iii) use the services for any illegal or unauthorized purposes.
+                </p>
+        
+                <h2>5. Account Registration</h2>
+                <p>
+                    To access certain features of the website, you may be required to create an account. You agree to provide accurate and complete information during registration and to keep your account credentials confidential.
+                </p>
+        
+                <h2>6. Limitation of Liability</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor risus ut metus aliquam, et mollis lectus viverra. Nulla facilisi. Vivamus malesuada viverra velit, vel vehicula nisl elementum id. Sed ut velit vitae elit aliquam auctor.
+                </p>
+        
+                <h2>7. Termination</h2>
+                <p>
+                    We reserve the right to suspend or terminate your access to our services at any time, with or without cause, if we believe that you have violated these Terms of Service.
+                </p>
+        
+                <h2>8. Changes to Terms</h2>
+                <p>
+                    We may update these Terms of Service periodically. We will notify users of any significant changes, but it is your responsibility to review these terms regularly. Continued use of the website constitutes your acceptance of any changes made to the Terms.
+                </p>
+        
+                <h2>9. Governing Law</h2>
+                <p>
+                    These Terms of Service are governed by the laws of [Your Country/State]. Any disputes arising from these terms will be resolved in the courts located in [Your Jurisdiction].
+                </p>
+        
+                <h2>10. Contact Us</h2>
+                <p>
+                    If you have any questions regarding these Terms of Service, please contact us at [Email Address].
+                </p>
+            </div>
+        </section>
+
+        <footer id="footer_id" style="height: 100px; text-align: center;">
+            <div class="footer_div container">
+                <div class="copyright_div" style="text-align: center;">
+                    <p>© 2024 Lawliet. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
