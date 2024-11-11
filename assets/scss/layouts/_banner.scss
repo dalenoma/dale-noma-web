@@ -303,8 +303,8 @@
                     }
                     
                     @include custom_responsive(767.9px, 991.9px){
-                        width: 20vw;
-                        height: 80px ;
+                        width: 40vw;
+                        height: 120px ;
                         bottom: -20px;
                         left: 75px;
                     }
@@ -315,7 +315,7 @@
   
                     .lawyer_name{
                     
-                        @include font($dim, $jakarta, 24px, normal,700);
+                        @include font($dim, $jakarta, 18px, normal,700);
                         line-height: 36px;                       
                         text-align: center;
                         

@@ -1,10 +1,10 @@
-/* Error: Undefined variable.
- *    ,
- * 19 |     font-family: $poppins;
- *    |                  ^^^^^^^^
- *    '
- *   assets\scss\layouts\_reset.scss 19:18  @use
- *   assets\scss\style.scss 8:1             root stylesheet */
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 5 | @use "./mixins/responsive";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   assets\scss\layouts\_headers.scss 5:1  @use
+ *   assets\scss\style.scss 9:1             root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 19 \2502      font-family: $poppins;\a    \2502                   ^^^^^^^^\a    \2575 \a   assets\\scss\\layouts\\_reset.scss 19:18  @use\a   assets\\scss\\style.scss 8:1             root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @use \"./mixins/responsive\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   assets\\scss\\layouts\\_headers.scss 5:1  @use\a   assets\\scss\\style.scss 9:1             root stylesheet";
 }

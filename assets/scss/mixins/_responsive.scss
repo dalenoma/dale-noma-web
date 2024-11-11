@@ -30,8 +30,9 @@
     }
 }
 
-@mixin custom_responsive($min_w, $max_w){
-    @media (min-width: $min_w) and (max-width: $max_w){
-        @content;
+// assets/scss/_mixins.scss
+@mixin custom_responsive($min-width, $max-width) {
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {
+      @content; // This will allow the mixin to wrap the styles passed to it
     }
-}
+  }
