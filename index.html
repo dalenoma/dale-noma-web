@@ -45,6 +45,7 @@
     <!-- MY EXTERNAL CSS  -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <link rel="stylesheet" href="./assets/styles/indexextrastyles.css" />
+    <link rel="stylesheet" href="./assets/styles/buttonloader.css" />
     
 </head>
 
@@ -247,18 +248,19 @@
             </div>
         </section>
         <section id="Contact_id">
-        
             <div class="form-style-5">
                 <form id="contactForm" action="https://formsubmit.co/302b5123d3b2fe890ce4293c30ed70e6" method="POST">
                     <fieldset>
-                    <legend><span class="number">1</span> Contact Us</legend>
-                    <input type="text" name="field1" placeholder="Your Name *" required>
-                    <input type="email" name="field2" placeholder="Your Email *" required>
-                    <input type="text" name="field2=3" placeholder="Your Phone Number *" required>
-                    <textarea name="field4" placeholder="Message(Optional)"></textarea>
+                        <legend><span class="number">1</span> Contact Us</legend>
+                        <input type="text" name="field1" placeholder="Your Name *" required>
+                        <input type="email" name="field2" placeholder="Your Email *" required>
+                        <input type="text" name="field3" placeholder="Your Phone Number *" required>
+                        <textarea name="field4" placeholder="Message (Optional)"></textarea>
                     </fieldset>
                     <input type="submit" value="Send" />
                 </form>
+                <div id="loader" class="loader" style="display: none;"></div>
+                <p id="successMessage" class="success-message" style="display: none;">Thank you! Your message has been sent successfully.</p>
             </div>    
         
             <div class="image">
@@ -288,9 +290,6 @@
                             <a href="/terms.html"><li>Terms of Service</li></a>
                             <a href="/privacy.html"><li>Privacy Policy</li></a>
                             <li>Careers (Soon)</li>
-                            <!--<a href="#"><li>Press</li></a>
-                            <a href="#"><li>Careers</li></a>
-                            <a href="#"><li>Contact</li></a>-->
                         </ul>
                     </div>
                     <div class="support">
@@ -315,42 +314,5 @@
         </footer>
     </div>
 </body>
-
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        // Flag to track validation status
-        let isValid = true;
-    
-        // Get form field values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
-    
-        // Validate Name
-        if (name.trim() === "") {
-            alert("Name is required.");
-            isValid = false;
-        }
-    
-        // Validate Email
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            isValid = false;
-        }
-    
-        // Validate Phone Number (optional, but ensure it's not empty and matches a basic pattern)
-        const phonePattern = /^[\+]?[0-9]{0,3}\W?+[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im; // Simple validation for 10 digit phone number
-        if (!phonePattern.test(phone)) {
-            alert("Please enter a valid phone number (10 digits).");
-            isValid = false;
-        }
-    
-        // If the form is not valid, prevent form submission
-        if (!isValid) {
-            event.preventDefault(); // Prevent form submission
-        }
-    });
-    </script>
+<script src="./assets/js/formsubmit.js"></script>
 </html>
